@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Crear Projecto</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{form}}
+        <button>
+            SAVE
+        </button>
+    </form> 
+{% endblock content %}

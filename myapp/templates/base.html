@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django</title>
+    <link rel="stylesheet" href="{% static '/style/main.css' %}">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="navbar">
+            <img src="{% static 'illojuan.png' %}" class="logo" alt="Main Logo">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/project/">Projects</a>
+                        
+                    </li>
+                    <li>
+                        <a href="/create_project/">Crear Proyecto</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/task">Tasks</a>
+                    </li>
+                    <li>
+                        <a href="/create_task/">Crear Tasks</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/pablo">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    
+        <div class="conteiner2">
+            {% block content %}
+          
+            {% endblock content %}    
+        </div>
+    </div>
+   
+    
+</body>
+</html>

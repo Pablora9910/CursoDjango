@@ -1,0 +1,130 @@
+/* body{
+    background: #202020;
+    color: whitesmoke;
+} */
+@import 'https://fonts.googleapis.com/css?family=Rubik+One';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(5, 10, 5, 0.80), rgba(90, 40, 90, 0.80)), url(../bg-image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    width: 80%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 130px;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: Roboto, "sans-serif";
+    font-size: 1.2rem;
+}
+
+.navbar ul li::before {
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: yellowgreen;
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    transition: 0.4s ease-out;
+}
+
+.navbar ul li:hover::before {
+    width: 100%;
+}
+
+.conteiner2 {
+
+    color: whitesmoke;
+}
+
+.taskCard {
+    background: #110048;
+    border-color: #5e0101;
+    border: 5px;
+    margin: 10px;
+    padding: 20px;
+}
+
+.taskCard a{
+
+
+    color: white;
+    /* transform: translate(-10%, -10%); */
+    font-family: 'Rubik One', sans-serif;
+    text-decoration: none;
+    font-size: 2vw;
+    transition: all .5s;
+    background-color: #3498db;
+    width: 10%;
+    padding: 21px 0;
+    display: grid;
+
+
+
+}
+
+.taskCard a ::before {
+    bottom: -15px;
+    height: 15px;
+    width: 100%;
+    left: 8px;
+    transform: skewX(45deg);
+    background-color: darken(#3498db, 20%);
+}
+
+.taskCard a::after {
+
+    right: -15px;
+    height: 100%;
+    width: 15px;
+    bottom: -8px;
+    transform: skewY(45deg);
+    background-color: darken(#3498db, 30%);
+}
+
+.taskCard a:active {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.taskCard a::before {
+    bottom: -5px;
+    height: 5px;
+    left: 3px;
+}
+
+.taskCard button::after {
+    right: -5px;
+    width: 5px;
+    bottom: -3px;
+}

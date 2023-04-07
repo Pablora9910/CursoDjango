@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Task</h1>
+
+{% for task in tasks %}
+
+<div class = "taskCard">
+    <h1>{% if task.done == False %} 🕐 {% else %} ✅ {% endif %} {{task.title}}</h1>
+    {% if task.done == False %}
+    <p>Tarea Pendiente</p>
+    {% else %}
+    <p>Tarea relizada</p>
+    {% endif %}
+    <!--  -->
+
+    <a href="/task_delete/{{task.id}}">
+        Delete
+    </a>
+    
+    {% if task.done == False %}    
+    <a href="/task_done/{{task.id}}" >
+        ✅ Done
+    </a>
+    {% endif %}
+</div>
+
+{% endfor %}
+{% endblock content %}

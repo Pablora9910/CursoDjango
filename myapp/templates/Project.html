@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Project</h1>
+
+{% comment %} <p>{{project}}</p> {% endcomment %}
+
+{%for project in projects %}
+   
+    <div>
+        <p>{{project.name}}</p>
+     
+    </div>
+{% endfor %}
+{% endblock content %}
